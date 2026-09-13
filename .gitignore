@@ -1,0 +1,27 @@
+# PROS build output
+bin/
+.d/
+
+# Generated tooling files
+compile_commands.json
+.cache/
+
+# Editor / IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs / temporary files
+*.log
+*.tmp
+*.errors
+*.ini
+
+# Compiled objects / executables
+*.o
+*.obj
+*.bin
+*.elf

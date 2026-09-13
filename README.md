@@ -6,7 +6,7 @@ This repository is a recruiting-focused snapshot of the robot code. It preserves
 
 ## My Role
 
-I served as **Head Programmer & Builder** on 5150E. My work included autonomous routine development, drivetrain/control tuning, sensor integration, subsystem automation, testing, and competition iteration.
+I served as **Head Programmer & Builder** on 5150E and was the primary developer responsible for the robot-specific software, including autonomous routines, drivetrain and control tuning, sensor integration, subsystem automation, testing, and competition iteration.
 
 This was a **team project**. The repository is shared to demonstrate my robotics programming work and does not imply that every line of the codebase was written solely by me.
 

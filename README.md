@@ -63,7 +63,7 @@ Those changes directly affected the software. Autonomous paths, sensor threshold
 Competition development required tight iteration between the mechanical and software sides of the robot. As **Head Programmer & Builder**, I was involved in both, which made it possible to diagnose whether failures originated from software behavior, sensor configuration, mechanism geometry, or hardware reliability.
 
 2023-2024 Season Robot:
-![Previous Season 5150E Over Under robot](images/5150E_over_under_bot_png)
+![Previous Season 5150E Over Under robot](images/5150E_over_under_bot.png)
 
 ## Repository Layout
 

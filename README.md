@@ -2,7 +2,11 @@
 
 Competition software used by **Danbury Mad Hatters Envy (5150E)** during the 2024–25 VEX V5 Robotics Competition: **High Stakes** season.
 
-This repository is a recruiting-focused snapshot of the robot code. It preserves the competition source largely as it was used during the season, including commented alternative autonomous sequences that were kept for rapid iteration at events. This repository is shared for portfolio and code-review purposes. No license is granted for reuse, modification, or redistribution.
+This repository is a recruiting-focused snapshot of the robot code. It preserves the competition source largely as it was used during the season, including commented alternative autonomous sequences that were kept for rapid iteration at events.
+
+![5150E High Stakes competition robot](images/5150E_high_stakes_final.png)
+
+This repository is shared for portfolio and code-review purposes. No license is granted for reuse, modification, or redistribution.
 
 ## My Role
 
@@ -22,19 +26,41 @@ This was a **team project**. The repository is shared to demonstrate my robotics
 
 ## Technical Highlights
 
-### Drivetrain and autonomous control
+### Drivetrain and Autonomous Control
+
 - Configured a LemLib drivetrain with separate lateral and angular PID controllers.
 - Used IMU feedback and chassis odometry for autonomous translation, turning, and pose-based movement.
 - Developed multiple autonomous routines for alliance color, starting position, elimination strategy, and skills runs.
 
-### Sensor-driven subsystem automation
+### Sensor-Driven Subsystem Automation
+
 - **Optical color sorting:** detected red/blue rings from RGB ratios and automatically rejected opposing-color rings.
 - **Automatic intake recovery:** monitored intake torque and reversed the intake when a sustained jam was detected.
 - **Mobile-goal acquisition:** used distance sensing to trigger the goal clamp and adjust approach behavior.
 - **Lift positioning:** used rotation-sensor feedback for automated loading, scoring, and reset positions.
 
-### Concurrent robot behavior
-Several subsystem behaviors run as independent PROS tasks so sensing and mechanism control can continue while the drivetrain is moving. Examples include ring detection, color sorting, goal clamping, intake recovery, lift control, and telemetry display.
+### Concurrent Robot Behavior
+
+Several subsystem behaviors run as independent PROS tasks so sensing and mechanism control can continue while the drivetrain is moving.
+
+Examples include:
+
+- Ring detection and color sorting
+- Goal clamping
+- Intake jam recovery
+- Lift control
+- Sensor monitoring
+- Telemetry display
+
+## Design & Competition Iteration
+
+The robot changed substantially throughout the season as we refined the intake, scoring mechanisms, sensor placement, and overall mechanical architecture.
+
+Those changes directly affected the software. Autonomous paths, sensor thresholds, mechanism timing, and subsystem behaviors were repeatedly retuned as the physical robot evolved.
+
+![Earlier 5150E High Stakes robot iteration](images/5150E_high_stakes_initial.png)
+
+Competition development required tight iteration between the mechanical and software sides of the robot. As **Head Programmer & Builder**, I was involved in both, which made it possible to diagnose whether failures originated from software behavior, sensor configuration, mechanism geometry, or hardware reliability.
 
 ## Repository Layout
 
@@ -47,26 +73,3 @@ Several subsystem behaviors run as independent PROS tasks so sensing and mechani
 │   └── main.cpp
 └── docs/
     └── CODE_GUIDE.md
-```
-
-The original PROS/LemLib framework files, generated build artifacts, editor configuration, and vendored libraries are intentionally omitted so the repository stays focused on the team-authored robot logic.
-
-## About the Commented Code
-
-Large commented sections in `src/main.cpp` are intentionally preserved. During competition, autonomous paths and mechanism sequences often needed to be adjusted quickly for field conditions, robot changes, or strategy. Keeping previous versions near the active routine was faster and safer for our event workflow than repeatedly replacing entire functions.
-
-For a production software project I would normally use version control and smaller modules instead. Here, the commented alternatives are part of the historical competition code and show the iteration process used during the season.
-
-## Build Notes
-
-This snapshot is intended primarily for code review rather than as a self-contained build. The original project used **PROS 3.8.0** with **LemLib 0.5.0-rc.5** and included framework-generated headers/libraries that are not committed here.
-
-To recreate a buildable project, create a matching PROS V5 project, install the corresponding LemLib version, and place `src/main.cpp` and `include/main.h` into that project.
-
-## Competition Results
-
-The team earned multiple awards and qualifications during my time with 5150E, including tournament championships, Design and Excellence awards, and VEX Worlds qualification.
-
-## Notes for Reviewers
-
-If you are skimming the code, start with `docs/CODE_GUIDE.md`, which points to the most representative control, sensing, and autonomous sections.
